@@ -1,0 +1,227 @@
+Introduction:
+Python (Human read program) => compiler/Interpreter => c-python VM (converting) => Machine Language.
+compiler => read full file
+Interpreter => read line by line
+ Python Indentation:  Important and indicate block of code
+•	In Python, a statement usually ends when the line ends. You do not need to use a semicolon (;) like in many other programming languages 
+•	You can write multiple statements on one line by separating them with ;
+•	Text in Python must be inside quotes. You can use either " double quotes or ' single quotes:
+•	Numbers did not require any quotes.
+•	# used to keep comments in program. “””   “”” also.
+PRINT ():
+It will print data.
+We can use end parameter to continue instead of ending the line.
+EX: 
+print("Hello World!", end=" ")
+print("I will print on the same line.")
+Output:
+Hello World! I will print on the same line.
+VARIABLES:
+•	Variables are containers for storing data values. We can create by assigning value. Ex: a=5
+•	Variables do not need to be declared with any particular type, and can even change type after they have been set.
+•	Variable names are case-sensitive.
+CASTING: If you want to specify the data type of a variable, this can be done with casting.
+x = str(3)    # x will be '3'
+y = int(3)    # y will be 3
+z = float(3)  # z will be 3.0
+Rules for Python variables:
+•	A variable name must start with a letter or the underscore character
+•	A variable name cannot start with a number.
+•	A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
+•	Variable names are case-sensitive (age, Age and AGE are three different variables)
+•	A variable name cannot be any of the Python keywords.
+Many Values to Multiple Variables  - x, y, z = "Orange", "Banana", "Cherry"
+One Value to Multiple Variables   -   x=y=z=”orange”
+Unpack a Collection   -  fruits=["1", "2", "3"]; x,y,z=fruits
+You can also use the + operator to output multiple variables:
+Global Variable: Normally, when you create a variable inside a function, that variable is local, and can only be used inside that function. To create a global variable inside a function, you can use the global keyword.   Ex: global x
+
+DATA TYPES:
+#########Fundamental data types
+Text Type:	str
+Numeric Types:	int, float, complex
+Sequence Types:	list, tuple, range
+Mapping Type:	dict
+Set Types:	set, frozenset
+Boolean Type:	bool
+Binary Types:	bytes, bytearray, memoryview
+None Type:	NoneType
+########## classes => custom data types
+########## specialized date types
+None
+	Int: integer, is a whole number, positive or negative, without decimals, of unlimited length.
+	Float: "floating point number" is a number, positive or negative, containing one or more decimals.
+	Complex: Complex numbers are written with a "j" as the imaginary part:
+           Python does not have a random() function to make a random number, but Python has a built-in module called random that can be used to make random numbers:
+           Strings: 
+•	You can assign a multiline string to a variable by using three quotes double or single:
+•	Python does not have a character data type, a single character is simply a string with a length of 1. len()
+•	Slice the string using index of character. 
+print(a[0]) 
+print(a[0:])
+print(a[:3]) - start to b3fore 3 rd position
+print(a[2:]) - start from 2nd to last
+print(a[-4:-1]) - -1 from last order stop beofre -4
+print(a[-4:]) - 
+print(a[:-3])
+•	Format string: To specify a string as an f-string, simply put an f in front of the string literal, and add curly brackets {} as placeholders for variables and other operations.
+EX: a=4; b="hello"; print(f'{a} {b}')
+•	A modifier is included by adding a colon : followed by a legal formatting type, like .2f which means fixed point number with 2 decimals:
+•	\ can use to escape special character inside the quotes.
+Booleans: True or False 
+OPERATOR:
+
+Arithmetic Operator: + - / *   **(expo)   //(integer )   % reminder
+•	Precedence:
+Operator	Description	Try it
+()	Parentheses	
+**	Exponentiation	
++x  -x  ~x	Unary plus, unary minus, and bitwise NOT	
+*  /  //  %	Multiplication, division, floor division, and modulus	
++  -	Addition and subtraction	
+<<  >>	Bitwise left and right shifts	
+&	Bitwise AND	
+^	Bitwise XOR	
+|	Bitwise OR	
+==  !=  >  >=  <  <=  is  is not  in  not in 	Comparisons, identity, and membership operators	
+not	Logical NOT	
+and	AND	
+or	OR	
+ 
+Assignment Operator: =   +=  -= *= /= %= //= **= &= ^= >>=  <<= :=
+Comparison Operator: == != > < >= <=
+Logical Operator: and or not
+Identify Operators:  is,  is not
+Membership Operator: in , not in
+Bitwise operator: & ! ^ ~ << >>
+
+ 
+##MATH FUNCTIONS###
+Print(round(3.1))   - rounding the float to int
+Print(abs (-20))	    - absolute value
+
+
+EXPRESSION AND STATEMENTS:
+•	Operation is going to perform in expression
+•	Statement is the sentence of data
+User = a/b a/b is expression and entire line is statements.
+
+IMMUTABILITY:
+We can reassign variable value.
+
+Built in function and Methods are there in python.
+
+
+PASSWORD CHECKER:
+name = input('YOur name: ')
+password = input('your password: ')
+pass_len = len(password)
+print('*' * 10)
+print(f'your password {'*' * 10} lenth is {pass_len}')
+•	List is a collection which is ordered and changeable. Allows duplicate members.
+•	Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+•	Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+•	Dictionary is a collection which is ordered** and changeable. No duplicate members.
+LISTS:[]
+•	Store multiple items in single variable and item can be in any data types.
+•	List items are ordered (will be in defined order. New item will be in last), changeable, and allow duplicate values.
+•	List items are indexed, the first item has index [0], the second item has index [1] etc.
+
+list1 = ["abc", 34, True, 40, "male"]
+•	It is also possible to use the list() constructor when creating a new list.
+mylist = list(("a", "b", "c"))
+print(mylist)
+•	List Comprehension:
+newlist = [expression for item in iterable if condition == True]
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [i for i in fruits if "a" in i ]
+print(newlist)
+LIST METHODS: 
+list.append(elmnt)
+list.clear()
+  	list.copy()
+	list.count(value)
+      list.extend(iterable)
+	list.index(elmnt, start, end)
+	list.insert(pos, elmnt)
+list.pop(pos)
+list.remove(elmnt)
+list.reverse()
+list.sort(reverse=True|False, key=myFunc)
+TUPLES:
+•	Stored Multiple items in a single variable. Can be any data types.
+•	It is ordered and Unchangeable, allow duplicates.
+•	Tuples ()
+•	items are indexed, the first item has index [0], the second item has index [1] etc.
+Join Tules:
+Ex: 
+tuple1 = ("a", "b”, "c")
+tuple2 = (1, 2, 3)
+tuple3 = tuple1 + tuple2
+print(tuple3)
+
+fruits = ("apple", "banana", "cherry")
+mytuple = fruits * 2
+print(mytuple)
+
+	METHODS:
+	tuple.count(value)
+	tuple.index(value)
+SETS:
+•	Stored Multiple items in a single variable.
+•	Unordered, Unchangeable, unindexed.
+•	Duplicate not allowed.
+•	Set items can be of any data type.
+•	Set {}
+•	Cannot change but can ADD item.
+METHODS:
+set.add(elmnt)
+set.clear()
+set.copy()
+set.difference(set1, set2 ... etc.)
+set.difference_update(set1, set2 ... etc.) and a -= b | c
+set.discard(value)
+set.intersection(set1, set2 ... etc.)
+set.intersection_update(set1, set2 ... etc)
+set.isdisjoint(set)
+set.issubset(set1)
+set.issuperset(set)
+set.pop()
+set.remove(item)
+set.symmetric_difference(set1)
+set.symmetric_difference_update(set1)
+set.union(set1, set2...)
+	set.update(set1, set2 ...)
+
+MATRIX:
+ Array of array is matrix – used in Machine Learning and image processing.
+
+DICTIONARY:
+•	Dictionaries are used to store data values in key:value pairs.
+•	Changeable, ordered, not allow duplicates.
+•	Dictionary {}
+•	Key should be unique
+###print(test.get('c'))  =.  Format: print(user.get(key, default)) . it will avoid error if key not there and give value of default 
+
+METHODS:
+dictionary.clear()
+dictionary.copy()
+dict.fromkeys(keys, value)
+dictionary.get(keyname, value)
+dictionary.items()
+dictionary.keys()
+dictionary.pop(keyname, defaultvalue)
+dictionary.popitem()
+dictionary.setdefault(keyname, value)
+dictionary.update(iterable)  update({"color": "White"})
+dictionary.values()
+
+
+
+
+
+
+
+
+
+
